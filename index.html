@@ -1,55 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Lakshmi KT | Embedded Systems Engineer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <style>
+        :root {
+            --primary-bg: #0a192f;
+            --accent-blue: #64ffda;
+            --text-main: #333;
+            --text-light: #f4f6f9;
+            --card-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f6f9;
-            color: #333;
+            background-color: var(--text-light);
+            color: var(--text-main);
+            line-height: 1.6;
         }
 
         header {
-            background-color: #0a192f;
+            background-color: var(--primary-bg);
             color: white;
             text-align: center;
-            padding: 40px 20px;
+            padding: 60px 20px;
         }
+
+        header h1 { margin: 0; font-size: 2.5rem; color: var(--accent-blue); }
+        header p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
 
         section {
             padding: 40px 20px;
-            max-width: 900px;
+            max-width: 950px;
             margin: auto;
         }
 
         h2 {
-            border-bottom: 2px solid #0a192f;
-            padding-bottom: 5px;
+            border-bottom: 2px solid var(--primary-bg);
+            padding-bottom: 10px;
+            color: var(--primary-bg);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
         }
 
         .card {
             background: white;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.2s;
+        }
+
+        .card:hover { transform: translateY(-5px); }
+
+        .skill-tag {
+            display: inline-block;
+            background: #e1e7f0;
+            padding: 5px 12px;
+            border-radius: 20px;
+            margin: 4px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .project-date {
+            font-size: 0.85rem;
+            color: #666;
+            font-style: italic;
         }
 
         footer {
             text-align: center;
-            padding: 20px;
-            background-color: #0a192f;
+            padding: 30px;
+            background-color: var(--primary-bg);
             color: white;
         }
 
-        a {
-            color: #0077b5;
-            text-decoration: none;
-        }
+        a { color: var(--accent-blue); text-decoration: none; font-weight: bold; }
+        .contact-link { color: #0077b5; margin: 0 10px; }
     </style>
 </head>
 
@@ -57,75 +94,91 @@
 
 <header>
     <h1>Lakshmi KT</h1>
-    <p>Electronics & Communication Engineer | Embedded Systems | Edge AI</p>
+    <p>M.Tech in Embedded Systems | Electronics & Communication Engineer</p>
+    <p style="font-size: 0.9rem;">Result-oriented engineer focused on circuits, firmware, and intelligent hardware.</p>
 </header>
 
-<section>
+<section id="about">
     <h2>About Me</h2>
-    <p>
-        I am a B.Tech Electronics and Communication Engineering student with strong interest in 
-        Embedded Systems, Edge Computing, and Intelligent Robotic Systems. 
-        I specialize in Arduino, Raspberry Pi, C, and Python development.
-        I aim to design intelligent hardware systems that solve real-world problems.
-    </p>
-</section>
-
-<section>
-    <h2>Technical Skills</h2>
     <div class="card">
-        <b>Programming:</b> C, Python<br><br>
-        <b>Embedded Platforms:</b> Arduino, Raspberry Pi, STM32<br><br>
-        <b>Core Areas:</b> Embedded Systems, Edge AI, IoT, Robotics<br><br>
-        <b>Tools:</b> Git, VS Code, Tinkercad
+        <p>
+            I am a <strong>Master of Technology (Embedded Systems)</strong> student at Amrita Vishwa Vidyapeetham. 
+            With a strong foundation in Electronics and Communication Engineering (8.32 CGPA), I specialize in 
+            developing intelligent hardware solutions ranging from AI-enabled robotics to portable digital instrumentation. 
+            I am passionate about making a positive impact on the tech industry through efficient circuit design and embedded software[cite: 3].
+        </p>
     </div>
 </section>
 
-<section>
+<section id="skills">
+    <h2>Technical Expertise</h2>
+    <div class="grid-container">
+        <div class="card">
+            <h3>Programming</h3>
+            <span class="skill-tag">C</span>
+            <span class="skill-tag">Verilog (Basics)</span>
+            <span class="skill-tag">Assembly Language</span> [cite: 7]
+        </div>
+        <div class="card">
+            <h3>Hardware & Platforms</h3>
+            <span class="skill-tag">STM32</span>
+            <span class="skill-tag">Raspberry Pi</span>
+            <span class="skill-tag">Arduino</span>
+            <span class="skill-tag">VEGA Processors</span> [cite: 7, 14]
+        </div>
+        <div class="card">
+            <h3>Tools & IDEs</h3>
+            <span class="skill-tag">STM32Cube IDE</span>
+            <span class="skill-tag">Arduino IDE</span>
+            <span class="skill-tag">Proteus</span> [cite: 8]
+        </div>
+    </div>
+</section>
+
+<section id="projects">
     <h2>Key Projects</h2>
 
     <div class="card">
-        <h3>🤖 Companion Robot for Elderly</h3>
-        <p>
-            Developed an AI-based assistant using Raspberry Pi that provides
-            reminders, conversations, emotional interaction, and servo-based motion.
-            Integrated voice input-output system for real-time assistance.
-        </p>
+        <h3>🤖 Companion Robot for Elders <span class="project-date">(B.Tech Final Year)</span></h3>
+        <p>Built an AI-enabled care robot featuring voice interaction, automated scheduling, and reminders. 
+           Integrated line-follower capabilities for autonomous motion.</p>
     </div>
 
     <div class="card">
-        <h3>🚗 Edge-AI ADAS System</h3>
-        <p>
-            Implemented YOLO-based object detection on Raspberry Pi for
-            real-time risk scoring and intelligent braking decision systems.
-            Focused on Edge computing architecture.
-        </p>
+        <h3>⚡ STM32 Portable Digital Wattmeter <span class="project-date">(M.Tech)</span></h3>
+        <p>Developed a high-precision portable wattmeter utilizing the STM32 platform for real-time power monitoring.</p>
     </div>
 
     <div class="card">
-        <h3>🌍 Air Quality Prediction System</h3>
-        <p>
-            Built a sensor-based air monitoring system with ML-based prediction model
-            to alert users about environmental risk conditions.
-        </p>
+        <h3>🗣️ Interactive Desktop Robot <span class="project-date">(B.Tech 3rd Year)</span></h3>
+        <p>3D-printed desktop assistant utilizing <strong>GPT-based conversational AI</strong>. 
+           Integrated Raspberry Pi, servo motors, and LCD for human-robot interaction.</p>
     </div>
 
-</section>
-
-<section>
-    <h2>Certifications & Achievements</h2>
     <div class="card">
-        ✔ VLSI and SoC Design Certification<br>
-        ✔ IEEE WIE Volunteer<br>
-        ✔ Technical Writing & Robotics Projects Lead
+        <h3>🚜 Road Pothole & Bump Detection <span class="project-date">(Hackathon)</span></h3>
+        <p>Arduino-based system designed to detect and alert drivers of road irregularities in real-time.</p>
     </div>
 </section>
 
-<section>
-    <h2>Contact</h2>
+<section id="certifications">
+    <h2>Professional Certifications</h2>
+    <div class="card">
+        <ul>
+            <li><strong>Embedded Controllers</strong> – NeST Digital [cite: 13]</li>
+            <li><strong>CMOS Digital VLSI Design</strong> – NPTEL [cite: 12]</li>
+            <li><strong>VEGA Processors and Ecosystem</strong> – C-DAC Trivandrum [cite: 14]</li>
+        </ul>
+    </div>
+</section>
+
+<section id="contact" style="text-align: center;">
+    <h2>Get In Touch</h2>
+    <p>📧 <a href="mailto:lakshmikt435@gmail.com">lakshmikt435@gmail.com</a></p>
+    <p>📞 9747618975 [cite: 3]</p>
     <p>
-        📧 YourEmail@gmail.com <br><br>
-        🔗 <a href="https://github.com/yourusername" target="_blank">GitHub</a><br><br>
-        🔗 <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+        <a href="https://linkedin.com/in/lakshmi-kt-494683269" class="contact-link" target="_blank">LinkedIn</a> | 
+        <a href="https://github.com/lakshmikt435" class="contact-link" target="_blank">GitHub</a> [cite: 3]
     </p>
 </section>
 
