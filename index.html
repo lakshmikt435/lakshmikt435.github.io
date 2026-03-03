@@ -9,32 +9,90 @@
             --primary-bg: #0a192f;
             --accent-blue: #64ffda;
             --text-main: #333;
-            --text-light: #f4f6f9;
-            --card-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+            --text-light: #ccd6f6;
+            --card-white: #ffffff;
+            --section-bg: #f4f6f9;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--text-light);
+            background-color: var(--section-bg);
             color: var(--text-main);
             line-height: 1.6;
         }
 
+        /* --- Profile Header Section --- */
         header {
             background-color: var(--primary-bg);
             color: white;
-            text-align: center;
-            padding: 60px 20px;
+            padding: 80px 20px;
         }
 
-        header h1 { margin: 0; font-size: 2.5rem; color: var(--accent-blue); }
-        header p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
+        .profile-flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 1100px;
+            margin: auto;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
 
+        .photo-column {
+            flex: 0 0 auto;
+        }
+
+        .profile-photo {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--accent-blue);
+            box-shadow: 0px 0px 25px rgba(100, 255, 218, 0.2);
+        }
+
+        .details-column {
+            flex: 1;
+            min-width: 350px;
+        }
+
+        .details-column h1 {
+            margin: 0;
+            font-size: 3rem;
+            color: var(--accent-blue);
+            letter-spacing: 1px;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin: 5px 0 20px 0;
+            font-weight: 300;
+        }
+
+        .objective-box {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-left: 3px solid var(--accent-blue);
+            margin: 20px 0;
+            font-size: 0.95rem;
+            font-style: italic;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+        }
+
+        /* --- General Layout --- */
         section {
-            padding: 40px 20px;
-            max-width: 950px;
+            padding: 60px 20px;
+            max-width: 1000px;
             margin: auto;
         }
 
@@ -43,147 +101,193 @@
             padding-bottom: 10px;
             color: var(--primary-bg);
             text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+            font-size: 1.5rem;
         }
 
         .card {
-            background: white;
+            background: var(--card-white);
             padding: 25px;
-            border-radius: 10px;
-            box-shadow: var(--card-shadow);
-            transition: transform 0.2s;
+            margin: 20px 0;
+            border-radius: 12px;
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
         }
 
-        .card:hover { transform: translateY(-5px); }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* --- Education & Skills Styling --- */
+        .edu-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
 
         .skill-tag {
             display: inline-block;
             background: #e1e7f0;
-            padding: 5px 12px;
+            color: var(--primary-bg);
+            padding: 6px 14px;
             border-radius: 20px;
-            margin: 4px;
-            font-size: 0.9rem;
-            font-weight: bold;
+            margin: 5px;
+            font-size: 0.85rem;
+            font-weight: 600;
         }
 
-        .project-date {
-            font-size: 0.85rem;
-            color: #666;
-            font-style: italic;
+        /* --- Buttons & Links --- */
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-blue);
+            color: var(--primary-bg) !important;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #45c7a9;
+            box-shadow: 0 5px 15px rgba(100, 255, 218, 0.4);
+        }
+
+        .social-links a {
+            color: var(--text-light);
+            margin-right: 20px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            border-bottom: 1px transparent solid;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-blue);
+            border-bottom: 1px solid var(--accent-blue);
         }
 
         footer {
             text-align: center;
-            padding: 30px;
+            padding: 40px;
             background-color: var(--primary-bg);
             color: white;
+            font-size: 0.9rem;
         }
 
-        a { color: var(--accent-blue); text-decoration: none; font-weight: bold; }
-        .contact-link { color: #0077b5; margin: 0 10px; }
+        @media (max-width: 768px) {
+            .profile-flex { text-align: center; flex-direction: column; }
+            .contact-grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
-
 <body>
 
 <header>
-    <h1>Lakshmi KT</h1>
-    <p>M.Tech in Embedded Systems | Electronics & Communication Engineer</p>
-    <p style="font-size: 0.9rem;">Result-oriented engineer focused on circuits, firmware, and intelligent hardware.</p>
+    <div class="profile-flex">
+        <div class="photo-column">
+            <img src="your-photo.jpg" alt="Lakshmi KT" class="profile-photo">
+        </div>
+
+        <div class="details-column">
+            [cite_start]<h1>LAKSHMI KT [cite: 1]</h1>
+            [cite_start]<p class="tagline">Electronics and Communication Engineer [cite: 2]</p>
+            
+            <div class="contact-grid">
+                [cite_start]<span>📧 <a href="mailto:lakshmikt435@gmail.com" style="color:white; text-decoration:none;">lakshmikt435@gmail.com</a> [cite: 3]</span>
+                [cite_start]<span>📞 9747618975 [cite: 3]</span>
+                [cite_start]<span>🎓 M.Tech, Embedded Systems [cite: 5]</span>
+                [cite_start]<span>📍 CGPA: 9.02 [cite: 5]</span>
+            </div>
+
+            <div class="objective-box">
+                [cite_start]"Result-oriented Electronics and communication engineer with a strong background in electronics, circuits and embedded systems aiming to learn, grow and make a positive impact on the tech industry." [cite: 3]
+            </div>
+
+            <div class="social-links">
+                [cite_start]<a href="https://linkedin.com/in/lakshmi-kt-494683269" target="_blank">LinkedIn [cite: 3]</a>
+                [cite_start]<a href="https://github.com/lakshmikt435" target="_blank">GitHub [cite: 3]</a>
+                <br><br>
+                <a href="your-resume.pdf" class="btn">Download Resume</a>
+            </div>
+        </div>
+    </div>
 </header>
 
-<section id="about">
-    <h2>About Me</h2>
+<section id="education">
+    <h2>Education</h2>
     <div class="card">
-        <p>
-            I am a <strong>Master of Technology (Embedded Systems)</strong> student at Amrita Vishwa Vidyapeetham. 
-            With a strong foundation in Electronics and Communication Engineering (8.32 CGPA), I specialize in 
-            developing intelligent hardware solutions ranging from AI-enabled robotics to portable digital instrumentation. 
-            I am passionate about making a positive impact on the tech industry through efficient circuit design and embedded software[cite: 3].
-        </p>
+        <div class="edu-item">
+            [cite_start]<strong>Amrita Vishwa Vidyapeetham, Bangalore [cite: 5]</strong>
+            [cite_start]<span>2025 - 2027 [cite: 5]</span>
+        </div>
+        <p>M.Tech in Embedded Systems | [cite_start]CGPA: 9.02 [cite: 5]</p>
+        
+        <div class="edu-item">
+            [cite_start]<strong>Federal Institute of Science and Technology [cite: 5]</strong>
+            [cite_start]<span>2021 - 2025 [cite: 5]</span>
+        </div>
+        <p>B.Tech in Electronics and Communication Engineering | [cite_start]CGPA: 8.32 [cite: 5]</p>
     </div>
 </section>
 
 <section id="skills">
-    <h2>Technical Expertise</h2>
-    <div class="grid-container">
-        <div class="card">
-            <h3>Programming</h3>
-            <span class="skill-tag">C</span>
-            <span class="skill-tag">Verilog (Basics)</span>
-            <span class="skill-tag">Assembly Language</span> [cite: 7]
-        </div>
-        <div class="card">
-            <h3>Hardware & Platforms</h3>
-            <span class="skill-tag">STM32</span>
-            <span class="skill-tag">Raspberry Pi</span>
-            <span class="skill-tag">Arduino</span>
-            <span class="skill-tag">VEGA Processors</span> [cite: 7, 14]
-        </div>
-        <div class="card">
-            <h3>Tools & IDEs</h3>
-            <span class="skill-tag">STM32Cube IDE</span>
-            <span class="skill-tag">Arduino IDE</span>
-            <span class="skill-tag">Proteus</span> [cite: 8]
-        </div>
+    <h2>Technical Skills</h2>
+    <div class="card">
+        <p><strong>Programming:</strong> 
+            [cite_start]<span class="skill-tag">C [cite: 7]</span> 
+            [cite_start]<span class="skill-tag">Verilog [cite: 7]</span> 
+            [cite_start]<span class="skill-tag">Assembly [cite: 7]</span>
+        </p>
+        <p><strong>Platforms:</strong> 
+            [cite_start]<span class="skill-tag">STM32 [cite: 7]</span> 
+            [cite_start]<span class="skill-tag">Raspberry Pi [cite: 7]</span> 
+            [cite_start]<span class="skill-tag">Arduino [cite: 7]</span>
+            [cite_start]<span class="skill-tag">VEGA Processors [cite: 14]</span>
+        </p>
+        <p><strong>Tools:</strong> 
+            [cite_start]<span class="skill-tag">STM32Cube IDE [cite: 8]</span> 
+            [cite_start]<span class="skill-tag">Arduino IDE [cite: 8]</span> 
+            [cite_start]<span class="skill-tag">Proteus [cite: 8]</span>
+        </p>
     </div>
 </section>
 
 <section id="projects">
     <h2>Key Projects</h2>
-
+    
     <div class="card">
-        <h3>🤖 Companion Robot for Elders <span class="project-date">(B.Tech Final Year)</span></h3>
-        <p>Built an AI-enabled care robot featuring voice interaction, automated scheduling, and reminders. 
-           Integrated line-follower capabilities for autonomous motion.</p>
+        [cite_start]<h3>🤖 Companion Robot for Elders [cite: 10]</h3>
+        <p>Built an AI-enabled robot for elderly care with voice interaction, reminders, and automated scheduling. [cite_start]Integrated line follower robot for motion capabilities. [cite: 10]</p>
     </div>
 
     <div class="card">
-        <h3>⚡ STM32 Portable Digital Wattmeter <span class="project-date">(M.Tech)</span></h3>
-        <p>Developed a high-precision portable wattmeter utilizing the STM32 platform for real-time power monitoring.</p>
+        [cite_start]<h3>⚡ STM32 Based Portable Digital Wattmeter [cite: 10]</h3>
+        [cite_start]<p>Developed during M.Tech 1st Semester focusing on precise power measurement and portable instrumentation. [cite: 10]</p>
     </div>
 
     <div class="card">
-        <h3>🗣️ Interactive Desktop Robot <span class="project-date">(B.Tech 3rd Year)</span></h3>
-        <p>3D-printed desktop assistant utilizing <strong>GPT-based conversational AI</strong>. 
-           Integrated Raspberry Pi, servo motors, and LCD for human-robot interaction.</p>
+        [cite_start]<h3>💬 Interactive Companion Desktop Robot [cite: 10]</h3>
+        [cite_start]<p>Developed a 3D-printed desktop robot with GPT-based conversational AI, integrating Raspberry Pi, servo motors, and LCD. [cite: 10]</p>
     </div>
 
     <div class="card">
-        <h3>🚜 Road Pothole & Bump Detection <span class="project-date">(Hackathon)</span></h3>
-        <p>Arduino-based system designed to detect and alert drivers of road irregularities in real-time.</p>
+        [cite_start]<h3>🌱 Arduino Plant Monitoring System [cite: 10]</h3>
+        [cite_start]<p>Designed a system using environmental sensors for real-time soil monitoring and automated irrigation alerts. [cite: 10]</p>
     </div>
 </section>
 
 <section id="certifications">
-    <h2>Professional Certifications</h2>
+    <h2>Certifications</h2>
     <div class="card">
         <ul>
-            <li><strong>Embedded Controllers</strong> – NeST Digital [cite: 13]</li>
-            <li><strong>CMOS Digital VLSI Design</strong> – NPTEL [cite: 12]</li>
-            <li><strong>VEGA Processors and Ecosystem</strong> – C-DAC Trivandrum [cite: 14]</li>
+            [cite_start]<li>CMOS Digital VLSI Design - NPTEL [cite: 12]</li>
+            [cite_start]<li>Embedded Controllers - NeST Digital [cite: 13]</li>
+            [cite_start]<li>VEGA Processors and Ecosystem - C-DAC Trivandrum [cite: 14]</li>
         </ul>
     </div>
 </section>
 
-<section id="contact" style="text-align: center;">
-    <h2>Get In Touch</h2>
-    <p>📧 <a href="mailto:lakshmikt435@gmail.com">lakshmikt435@gmail.com</a></p>
-    <p>📞 9747618975 [cite: 3]</p>
-    <p>
-        <a href="https://linkedin.com/in/lakshmi-kt-494683269" class="contact-link" target="_blank">LinkedIn</a> | 
-        <a href="https://github.com/lakshmikt435" class="contact-link" target="_blank">GitHub</a> [cite: 3]
-    </p>
-</section>
-
 <footer>
-    © 2026 Lakshmi KT | Professional Portfolio
+    © 2026 Lakshmi KT | Professional Portfolio | Developed for Embedded Systems Excellence
 </footer>
 
 </body>
