@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Lakshmi KT | Embedded Systems Engineer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <style>
         :root {
             --primary-bg: #0a192f;
@@ -15,112 +14,79 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
+            padding: 0;
             background-color: var(--text-light);
             color: var(--text-main);
             line-height: 1.6;
         }
 
-        /* HEADER */
         header {
             background-color: var(--primary-bg);
             color: white;
             text-align: center;
-            padding: 40px 20px 25px;
+            padding: 60px 20px;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 2.4rem;
-            color: var(--accent-blue);
-        }
-
-        header p {
-            margin: 8px 0 15px;
-            font-size: 1rem;
-            opacity: 0.9;
-        }
-
-        /* CONTACT INFO */
-        .contact {
-            font-size: 0.95rem;
-        }
-
-        .contact a {
-            color: var(--accent-blue);
-            text-decoration: none;
-            margin: 0 10px;
-        }
-
-        .contact span {
-            margin: 0 10px;
-        }
+        header h1 { margin: 0; font-size: 2.5rem; color: var(--accent-blue); }
+        header p { margin: 10px 0 0; font-size: 1.1rem; opacity: 0.9; }
 
         section {
-            padding: 30px 20px;
-            max-width: 1000px;
+            padding: 40px 20px;
+            max-width: 950px;
             margin: auto;
         }
 
         h2 {
             border-bottom: 2px solid var(--primary-bg);
-            padding-bottom: 6px;
-            margin-bottom: 20px;
+            padding-bottom: 10px;
             color: var(--primary-bg);
             text-transform: uppercase;
             letter-spacing: 1px;
-            font-size: 1.2rem;
         }
 
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
 
         .card {
             background: white;
-            padding: 20px;
-            border-radius: 8px;
+            padding: 25px;
+            border-radius: 10px;
             box-shadow: var(--card-shadow);
-            margin-bottom: 20px;
             transition: transform 0.2s;
         }
 
-        .card:hover {
-            transform: translateY(-4px);
-        }
+        .card:hover { transform: translateY(-5px); }
 
         .skill-tag {
             display: inline-block;
             background: #e1e7f0;
             padding: 5px 12px;
-            border-radius: 15px;
-            margin: 4px 4px 0 0;
-            font-size: 0.85rem;
+            border-radius: 20px;
+            margin: 4px;
+            font-size: 0.9rem;
             font-weight: bold;
         }
 
         .project-date {
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             color: #666;
             font-style: italic;
         }
 
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 30px;
             background-color: var(--primary-bg);
             color: white;
-            font-size: 0.9rem;
         }
 
-        ul {
-            padding-left: 18px;
-            margin: 0;
-        }
-
+        a { color: var(--accent-blue); text-decoration: none; font-weight: bold; }
+        .contact-link { color: #0077b5; margin: 0 10px; }
     </style>
 </head>
 
@@ -142,16 +108,138 @@
     <h2>About Me</h2>
     <div class="card">
         <p>
-            I am Lakshmi KT, an <strong>M.Tech (Embedded Systems)</strong> scholar with a foundation in Electronics and Communication Engineering. 
-            I enjoy working hands-on with STM32, Raspberry Pi, and Arduino, turning ideas into real-world embedded solutions.
-        </p>
-        <p>
-            I currently serve as Class Representative for my M.Tech batch and enjoy mentoring and leading technical teams.
+           I am Lakshmi KT , an <strong>M.Tech (Embedded Systems)</strong> scholar at Amrita Vishwa Vidyapeetham, Bangalore with a foundation in Electronics and Communication Engineer. My favorite part of engineering is getting hands-on with microcontrollers like STM32, Raspberry Pi, and Arduino to see my code come to life in the physical world. Throughout my academic journey , I had the opportunity to work on numerous projects, from AI-enabled companion robots for the elderly to smart irrigation systems and digital wattmeters. From my early days of building small Arduino projects to my current work with Raspberry Pi , I’ve always been driven by the challenge of making tech that actually solves real-world problems. 
+
+
+           
+            </p>
+
+<p>
+            
+                   </p>
+
+<p>   <br>When I’m not at my workbench, you’ll usually find me leading or guiding projects. I really enjoy the process of mentoring others and seeing a team effort come together. In fact, I’m currently the Class Representative for my M.Tech batch at Amrita Vishwa Vidyapeetham, which has been a great way to stay involved and help my peers stay on track. I’m always looking for new challenges where I can grow as an engineer and help others do the same
+            
         </p>
     </div>
 </section>
 
-<!-- Keep the rest of your sections SAME as before -->
+<section id="skills">
+    <h2>Technical Expertise</h2>
+    <div class="grid-container">
+        <div class="card">
+            <h3>Programming Languages</h3>
+            <span class="skill-tag">C</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Assembly Language</span> 
+            <span class="skill-tag">Verilog (Basics)</span>
+            
+        </div>
+        <div class="card">
+            <h3>Microcontrollers</h3>
+            <span class="skill-tag">STM32</span>
+            <span class="skill-tag">Raspberry Pi</span>
+            <span class="skill-tag">Arduino</span>
+            <span class="skill-tag">VEGA Processors</span> 
+        </div>
+        <div class="card">
+            <h3>Tools & IDEs</h3>
+            <span class="skill-tag">STM32Cube IDE</span>
+            <span class="skill-tag">Arduino IDE</span>
+            <span class="skill-tag">Proteus</span> 
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>M.Tech Projects</h2>
+
+    <div class="card">
+        <h3>⚡STM32 Based Portable Digital Wattmeter <span class="project-date"></span></h3>
+        <p>🔹 Designed and implemented a portable digital wattmeter using STM32 microcontroller to measure real-time voltage, current, and power consumption with high accuracy.
+
+ </p>
+
+<p>🔹 Interfaced ADC, current sensors, and LCD display to perform real-time calculations and display electrical parameters efficiently.</p>
+    </div>
+
+     <div class="card">
+        <h3>🚚 Supply Chain Logistic Simulator using C<span class="project-date"></span></h3>
+        <p>🔹 Developed a console-based supply chain logistics simulator in C, implementing data structures and algorithms to optimize routing and inventory flow.
+ </p>
+
+<p>🔹 Simulated real-time logistics scenarios including warehouse management, order processing, and transportation cost analysis.</p>
+    </div>
+     <div class="card">
+        <h3>📊 Machine Learning-Based USD to INR Exchange Rate Predictor <span class="project-date"></span></h3>
+        <p>🔹 Built a predictive model using machine learning techniques to forecast USD to INR exchange rate trends based on historical data.
+ </p>
+
+<p>🔹 Performed data preprocessing, feature engineering, and model evaluation to improve prediction accuracy and analyze financial trends.</p>
+    </div>
+     <div class="card">
+        <h3>🛣️ Arduino Based Road Pothole & Bump Detection System (Hackathon Project)<span class="project-date"></span></h3>
+        <p>🔹 Designed a real-time road anomaly detection system using Arduino , accelerometer and ultrasonic sensors to identify potholes and speed bumps.
+
+ </p>
+
+<p>🔹 Implemented sensor data processing and alert mechanism to improve road safety and enable smart infrastructure monitoring.</p>
+    </div>
+</section>
+
+
+
+
+
+    <section id="projects">
+    <h2>B.Tech Projects</h2>
+
+    <div class="card">
+        <h3>🤖 Companion Robot for Elders <span class="project-date">(B.Tech Final Year)</span></h3>
+        <p>🔹 Developed an AI-enabled assistive robot for elderly care with voice interaction, medication reminders, and automated daily scheduling features. </p>
+         <p>🔹 Integrated mobility using a line-follower robotic base, enabling guided movement in indoor environments.</p>
+    </div>
+
+
+    <div class="card">
+        <h3>🖥️ Interactive Companion Desktop Robot (Fourth Year) <span class="project-date">(B.Tech 3rd Year)</span></h3>
+        <p>🔹 Designed and built a desktop robot integrated with GPT-based conversational AI for intelligent human-robot interaction.</p>
+         <p>🔹 Implemented Raspberry Pi control, servo motor actuation, and LCD display interface for expressive movement and real-time communication. </p>
+    </div>
+
+    <div class="card">
+        <h3>🌱 Arduino Based Plant Monitoring System (Third Year) <span class="project-date"></span></h3>
+        <p>🔹 Designed a smart plant monitoring system using Arduino and environmental sensors to measure soil moisture and temperature levels.</p>
+         <p>🔹 Implemented real-time data monitoring and automated irrigation alert mechanisms to promote efficient water management. </p>
+    </div>
+
+        <div class="card">
+        <h3>🗑️ Arduino Based Smart Dustbin (Second Year)<span class="project-date"></span></h3>
+        <p>🔹 Developed a touchless smart dustbin using Arduino and ultrasonic sensors for hygienic and automated waste disposal.</p>
+         <p>🔹 Programmed real-time distance detection to enable automatic lid opening and closing for enhanced user convenience.</p>
+    </div>
+        
+</section>
+
+
+
+
+
+
+    
+
+<section id="certifications">
+    <h2>Professional Certifications</h2>
+    <div class="card">
+        <ul>
+            <li><strong>Embedded Controllers</strong> – NeST Digital </li>
+            <li><strong>CMOS Digital VLSI Design</strong> – NPTEL </li>
+            <li><strong>VEGA Processors and Ecosystem</strong> – C-DAC Trivandrum </li>
+        </ul>
+    </div>
+</section>
+
+
 
 <footer>
     © 2026 Lakshmi KT | Professional Portfolio
