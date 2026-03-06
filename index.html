@@ -14,7 +14,7 @@
             --card-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         }
 
-        .profile{
+        .profile {
             width: 300px;
             height: 300px;
             border-radius: 50%;
@@ -116,6 +116,59 @@
             color: #0077b5;
             margin: 0 10px;
         }
+
+        .project {
+            width: 300px;
+            height: 300px;
+            border-radius: 5%;
+
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .supply {
+            width: 60%;
+            height: 200px;
+            border-radius: 1%;
+
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .project2 {
+            width: 700px;
+            height: 300px;
+            border-radius: 5%;
+
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .projectusd {
+            width: 50%;
+            height: 300px;
+            border-radius: 5%;
+
+            object-fit: cover;
+            margin-bottom: 15px;
+
+        }
+
+        .projectusd2 {
+            width: 75%;
+            height: 255px;
+            border-radius: 5%;
+
+            object-fit: cover;
+            margin-bottom: 15px;
+
+        }
+
+        .usdcontainer {
+            display: flex;
+            gap: 10px;
+            margin: 15px;
+        }
     </style>
 </head>
 
@@ -165,39 +218,14 @@
         </div>
     </section>
 
-    <section id="skills">
-        <h2>Technical Expertise</h2>
-        <div class="grid-container">
-            <div class="card">
-                <h3>Programming Languages</h3>
-                <span class="skill-tag">C</span>
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">Assembly Language</span>
-                <span class="skill-tag">Embedded C (Basics)</span>
-                <span class="skill-tag">Verilog (Basics)</span>
-
-            </div>
-            <div class="card">
-                <h3>Microcontrollers</h3>
-                <span class="skill-tag">STM32</span>
-                <span class="skill-tag">Raspberry Pi</span>
-                <span class="skill-tag">ESP 32</span>
-                <span class="skill-tag">Arduino</span>
-            </div>
-            <div class="card">
-                <h3>Tools & IDEs</h3>
-                <span class="skill-tag">STM32Cube IDE</span>
-                <span class="skill-tag">Arduino IDE</span>
-                <span class="skill-tag">Proteus</span>
-            </div>
-        </div>
-    </section>
 
     <section id="projects">
         <h2>M.Tech Projects</h2>
 
         <div class="card">
+
             <h3>⚡STM32 Based Portable Digital Wattmeter <span class="project-date"></span></h3>
+            <div><img src="STM32.jpeg" alt="" class="project"></div>
             <p>🔹 Designed and implemented a portable digital wattmeter using STM32 microcontroller to measure real-time
                 voltage, current, and power consumption with high accuracy.
 
@@ -209,6 +237,7 @@
 
         <div class="card">
             <h3>🚚 Supply Chain Logistic Simulator using C<span class="project-date"></span></h3>
+            <div><img src="SUPPLY.jpeg" alt="" class="supply"></div>
             <p>🔹 Developed a console-based supply chain logistics simulator in C, implementing data structures and
                 algorithms to optimize routing and inventory flow.
             </p>
@@ -217,7 +246,11 @@
                 transportation cost analysis.</p>
         </div>
         <div class="card">
+
             <h3>📊 Machine Learning-Based USD to INR Exchange Rate Predictor <span class="project-date"></span></h3>
+            <div class="Usdcontainer"><img src="USD1.jpeg" alt="" class="projectusd">
+                <img src="USD2.jpeg" alt="" class="projectusd2">
+            </div>
             <p>🔹 Built a predictive model using machine learning techniques to forecast USD to INR exchange rate trends
                 based on historical data.
             </p>
@@ -246,16 +279,21 @@
         <h2>B.Tech Projects</h2>
 
         <div class="card">
+
             <h3>🤖 Companion Robot for Elders <span class="project-date">(4th Year)</span></h3>
+
+            <div><img src="ELDER.jpeg" alt="" class="project"></div>
             <p>🔹 Developed an AI-enabled assistive robot for elderly care with voice interaction, medication reminders,
                 and automated daily scheduling features. </p>
             <p>🔹 Integrated mobility using a line-follower robotic base, enabling guided movement in indoor
                 environments.</p>
+                
         </div>
 
 
         <div class="card">
             <h3>🖥️ Interactive Companion Desktop Robot <span class="project-date">(3rd Year)</span></h3>
+            <div><img src="DESK.jpeg" alt="" class="project"></div>
             <p>🔹 Designed and built a desktop robot integrated with GPT-based conversational AI for intelligent
                 human-robot interaction.</p>
             <p>🔹 Implemented Raspberry Pi control, servo motor actuation, and LCD display interface for expressive
@@ -264,6 +302,7 @@
 
         <div class="card">
             <h3>🌱 Arduino Based Plant Monitoring System <span class="project-date">(2nd Year)</span></h3>
+            <!-- <div><img src=".jpeg" alt="" class="project"></div> -->
             <p>🔹 Designed a smart plant monitoring system using Arduino and environmental sensors to measure soil
                 moisture and temperature levels.</p>
             <p>🔹 Implemented real-time data monitoring and automated irrigation alert mechanisms to promote efficient
@@ -272,12 +311,40 @@
 
         <div class="card">
             <h3>🗑️ Arduino Based Smart Dustbin<span class="project-date">(1st Year)</span></h3>
+
             <p>🔹 Developed a touchless smart dustbin using Arduino and ultrasonic sensors for hygienic and automated
                 waste disposal.</p>
             <p>🔹 Programmed real-time distance detection to enable automatic lid opening and closing for enhanced user
                 convenience.</p>
         </div>
 
+    </section>
+    <section id="skills">
+        <h2>Technical Expertise</h2>
+        <div class="grid-container">
+            <div class="card">
+                <h3>Programming Languages</h3>
+                <span class="skill-tag">C</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Assembly Language</span>
+                <span class="skill-tag">Embedded C (Basics)</span>
+                <span class="skill-tag">Verilog (Basics)</span>
+
+            </div>
+            <div class="card">
+                <h3>Microcontrollers</h3>
+                <span class="skill-tag">STM32</span>
+                <span class="skill-tag">Raspberry Pi</span>
+                <span class="skill-tag">ESP 32</span>
+                <span class="skill-tag">Arduino</span>
+            </div>
+            <div class="card">
+                <h3>Tools & IDEs</h3>
+                <span class="skill-tag">STM32Cube IDE</span>
+                <span class="skill-tag">Arduino IDE</span>
+                <span class="skill-tag">Proteus</span>
+            </div>
+        </div>
     </section>
 
 
