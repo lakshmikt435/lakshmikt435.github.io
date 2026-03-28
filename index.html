@@ -121,7 +121,6 @@
             width: 300px;
             height: 300px;
             border-radius: 5%;
-
             object-fit: cover;
             margin-bottom: 15px;
         }
@@ -130,7 +129,6 @@
             width: 60%;
             height: 200px;
             border-radius: 1%;
-
             object-fit: cover;
             margin-bottom: 15px;
         }
@@ -139,7 +137,6 @@
             width: 700px;
             height: 300px;
             border-radius: 5%;
-
             object-fit: cover;
             margin-bottom: 15px;
         }
@@ -148,26 +145,33 @@
             width: 50%;
             height: 300px;
             border-radius: 5%;
-
             object-fit: cover;
             margin-bottom: 15px;
-
         }
 
         .projectusd2 {
             width: 75%;
             height: 255px;
             border-radius: 5%;
-
             object-fit: cover;
             margin-bottom: 15px;
-
         }
 
         .usdcontainer {
             display: flex;
             gap: 10px;
             margin: 15px;
+        }
+
+        /* Video styling */
+        .project-video {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 8px;
+            margin-top: 12px;
+            margin-bottom: 15px;
+            display: block;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
         }
     </style>
 </head>
@@ -198,22 +202,16 @@
                 life in the physical world. Throughout my academic journey , I had the opportunity to work on numerous
                 projects, from AI-enabled companion robots for the elderly to smart irrigation systems and digital
                 wattmeters. From my early days of building small Arduino projects to my current work with Raspberry Pi ,
-                I’ve always been driven by the challenge of making tech that actually solves real-world problems.
-
-
-
+                I've always been driven by the challenge of making tech that actually solves real-world problems.
             </p>
 
-            <p>
+            <p></p>
 
-            </p>
-
-            <p> <br>When I’m not at my workbench, you’ll usually find me leading or guiding projects. I really enjoy the
-                process of mentoring others and seeing a team effort come together. In fact, I’m currently the Class
+            <p> <br>When I'm not at my workbench, you'll usually find me leading or guiding projects. I really enjoy the
+                process of mentoring others and seeing a team effort come together. In fact, I'm currently the Class
                 Representative for my M.Tech batch at Amrita Vishwa Vidyapeetham, which has been a great way to stay
-                involved and help my peers stay on track. I’m always looking for new challenges where I can grow as an
+                involved and help my peers stay on track. I'm always looking for new challenges where I can grow as an
                 engineer and help others do the same
-
             </p>
         </div>
     </section>
@@ -223,14 +221,11 @@
         <h2>M.Tech Projects</h2>
 
         <div class="card">
-
             <h3>⚡STM32 Based Portable Digital Wattmeter <span class="project-date"></span></h3>
             <div><img src="STM32.jpeg" alt="" class="project"></div>
             <p>🔹 Designed and implemented a portable digital wattmeter using STM32 microcontroller to measure real-time
                 voltage, current, and power consumption with high accuracy.
-
             </p>
-
             <p>🔹 Interfaced ADC, current sensors, and LCD display to perform real-time calculations and display
                 electrical parameters efficiently.</p>
         </div>
@@ -241,12 +236,11 @@
             <p>🔹 Developed a console-based supply chain logistics simulator in C, implementing data structures and
                 algorithms to optimize routing and inventory flow.
             </p>
-
             <p>🔹 Simulated real-time logistics scenarios including warehouse management, order processing, and
                 transportation cost analysis.</p>
         </div>
-        <div class="card">
 
+        <div class="card">
             <h3>📊 Machine Learning-Based USD to INR Exchange Rate Predictor <span class="project-date"></span></h3>
             <div class="Usdcontainer">
                 <img src="USD2.jpeg" alt="" class="projectusd2">
@@ -254,46 +248,45 @@
             <p>🔹 Built a predictive model using machine learning techniques to forecast USD to INR exchange rate trends
                 based on historical data.
             </p>
-
             <p>🔹 Performed data preprocessing, feature engineering, and model evaluation to improve prediction accuracy
                 and analyze financial trends.</p>
         </div>
+
         <div class="card">
             <h3>🛣️ Arduino Based Road Pothole & Bump Detection System (Hackathon Project)<span
                     class="project-date"></span></h3>
             <p>🔹 Designed a real-time road anomaly detection system using Arduino , accelerometer and ultrasonic
                 sensors to identify potholes and speed bumps.
-
             </p>
-
             <p>🔹 Implemented sensor data processing and alert mechanism to improve road safety and enable smart
                 infrastructure monitoring.</p>
         </div>
     </section>
 
 
-
-
-
     <section id="projects">
         <h2>B.Tech Projects</h2>
 
         <div class="card">
-
             <h3>🤖 Companion Robot for Elders <span class="project-date">(4th Year)</span></h3>
-
             <div><img src="ELDER.jpeg" alt="" class="project"></div>
+            <video class="project-video" controls>
+                <source src="elder.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
             <p>🔹 Developed an AI-enabled assistive robot for elderly care with voice interaction, medication reminders,
                 and automated daily scheduling features. </p>
             <p>🔹 Integrated mobility using a line-follower robotic base, enabling guided movement in indoor
                 environments.</p>
-                
         </div>
-
 
         <div class="card">
             <h3>🖥️ Interactive Companion Desktop Robot <span class="project-date">(3rd Year)</span></h3>
             <div><img src="DESK.jpeg" alt="" class="project"></div>
+            <video class="project-video" controls>
+                <source src="desk.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
             <p>🔹 Designed and built a desktop robot integrated with GPT-based conversational AI for intelligent
                 human-robot interaction.</p>
             <p>🔹 Implemented Raspberry Pi control, servo motor actuation, and LCD display interface for expressive
@@ -302,7 +295,6 @@
 
         <div class="card">
             <h3>🌱 Arduino Based Plant Monitoring System <span class="project-date">(2nd Year)</span></h3>
-            <!-- <div><img src=".jpeg" alt="" class="project"></div> -->
             <p>🔹 Designed a smart plant monitoring system using Arduino and environmental sensors to measure soil
                 moisture and temperature levels.</p>
             <p>🔹 Implemented real-time data monitoring and automated irrigation alert mechanisms to promote efficient
@@ -311,7 +303,10 @@
 
         <div class="card">
             <h3>🗑️ Arduino Based Smart Dustbin<span class="project-date">(1st Year)</span></h3>
-
+            <video class="project-video" controls>
+                <source src="dustbin.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
             <p>🔹 Developed a touchless smart dustbin using Arduino and ultrasonic sensors for hygienic and automated
                 waste disposal.</p>
             <p>🔹 Programmed real-time distance detection to enable automatic lid opening and closing for enhanced user
@@ -319,6 +314,7 @@
         </div>
 
     </section>
+
     <section id="skills">
         <h2>Technical Expertise</h2>
         <div class="grid-container">
@@ -329,7 +325,6 @@
                 <span class="skill-tag">Assembly Language</span>
                 <span class="skill-tag">Embedded C (Basics)</span>
                 <span class="skill-tag">Verilog (Basics)</span>
-
             </div>
             <div class="card">
                 <h3>Microcontrollers</h3>
@@ -347,13 +342,6 @@
         </div>
     </section>
 
-
-
-
-
-
-
-
     <section id="certifications">
         <h2>Professional Certifications</h2>
         <div class="card">
@@ -364,8 +352,6 @@
             </ul>
         </div>
     </section>
-
-
 
     <footer>
         © 2026 Lakshmi KT | Professional Portfolio
